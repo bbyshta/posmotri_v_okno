@@ -116,6 +116,8 @@ ol {
 
 .search-form__textfield {
   min-width: 225px;
+  min-height: 27px;
+  padding: 0;
   border: none;
   border-block-start: 1px solid #fff;
   border-block-end: 1px solid #fff;
@@ -146,7 +148,14 @@ ol {
   background-color: transparent;
 }
 
-.search-form__checkbox:checked ~ .search-form__pseudo-checkbox::after {
+.search-form__checkbox:active + .search-form__pseudo-checkbox::after {
+  content: "";
+  min-width: 15px;
+  min-height: 15px;
+  background-color: #fff;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   content: "";
   min-width: 15px;
   min-height: 15px;
